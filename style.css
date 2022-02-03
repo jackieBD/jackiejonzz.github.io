@@ -1,0 +1,186 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: cyan;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
+h3{
+  font-size:24px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.grid{
+  background: #FFA7D8;
+  grid-gap: 1vh;
+  display: grid;
+  grid-template:  10vh 78vh 10vh/ 45px 1fr 300px;
+  grid-template-areas:
+    "header header header"
+    "sidebar content about"
+    "footer footer footer";
+
+
+}
+.header{
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+  font-weight: bold;
+
+
+
+
+}
+.dropdown-toggle{
+  color: cyan;
+  background: yellow;
+
+}
+
+.dropdown-item{
+  color: #483A71;
+  font-weight: bold;
+  background: #FFA7D8
+}
+
+.about
+.header,
+.footer,
+.content,
+.sidebar{
+  width: 100%;
+  height: 100%;
+}
+
+
+.footer{
+  grid-area: footer;
+  text-align: center;
+  justify-self: center;
+  background:#FFEDFD;
+  color: #483A71;
+}
+
+.footer>a{
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px;
+  color: #483A71;
+  transition: 200ms
+}
+
+.footer>a:hover{
+  color: #FFA7D8;
+}
+
+.content{
+  grid-area: content;
+  background: #483A71;
+  border-radius: 20px;
+}
+
+.sidebar{
+  grid-area: sidebar;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  grid-area: about;
+  padding: 10px;
+  color: #483A71
+}
+
+nav.navbar, nav.navbar>*, div.container-fluid>*, div.navbar-collapse>*, .navbar-nav>*{
+  color:#483A71
+  margin: 0;
+  background: #FFA7D8;
+  border: 0;
+  padding: 0;
+
+}
+
+
+.nav-item>*{
+  background: #FFA7D8;
+}
+
+.about>img{
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
+  border: 10px solid #FFEDFD;
+  border-radius: 100%;
+}
+
+
+.projects{
+  display: grid;
+  grid-template: 50% 50%/50% 50%;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.project-container{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-self: start;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.project-container>a{
+  text-decoration: none;
+  color:#FFA7D8;
+  transition: 400ms
+}
+
+.project-container>a:hover{
+  color: white;
+  font-weight: bold;
+}
+
+.thumbnail{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%
+}
+
+.video{
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+@media (max-width: 700px){
+  .grid{
+    grid-template: 50px 500px 500px 100px/100%;
+    grid-template-areas:
+      "header"
+      "content"
+      "about"
+      "footer";
+  }
+}
